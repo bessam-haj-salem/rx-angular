@@ -1,0 +1,16 @@
+<div class="border-class">
+  <!-- Async pipe -->
+   <!-- <ng-container *ngIf="mockService.mockObs$ | async as val">
+    <span class="numb"> {{ val }}</span>
+  </ng-container> -->
+
+  <!-- Rx angular -->
+  <ng-container *rxLet="mockService.mockObs$ as val">
+    <span class="numb"> {{ val }}</span>
+  </ng-container>
+  <p class="numb">{{ mockService.mockObs$ | push }}</p>
+
+  <ng-container *ngIf="logOnChangedetection()"></ng-container>
+  <button class="btn btn-primary m-3" (click)="({})">ComponentTwo</button>
+  <app-deep-component></app-deep-component>
+</div>
